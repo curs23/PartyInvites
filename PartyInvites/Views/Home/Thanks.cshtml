@@ -1,0 +1,28 @@
+﻿@model PartyInvites.Models.GuestResponse
+
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <p>
+        <h1>Thank you, @Model.Name!</h1>
+        @if (Model.WillAttend == true)
+        {
+            @:Великолепно! Приходите!
+        }
+        else
+        {
+            @:Ну и пошел в Ж...
+        }
+    </p>
+    <p>Click <a asp-action="ListResponses">here</a> to see who is coming.</p>
+</body>
+</html>
