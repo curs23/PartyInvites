@@ -2,16 +2,23 @@
 @{
     ViewData["Title"] = "MyView";
 }
+     
 <html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
 <body>
-    <div>
+    <p>
         @ViewBag.Greeting World (from the view)
-        <p>
-            We're going to have an exciting party. <br />
-            (To do: sell it better. Add pictures or something.)
-        </p>
-        <a asp-action="RsvpForm">RSVP Now</a>
+    </p>
+
+    <div class="text-center">
+        <h3>We're going to have an exciting party. </h3>
+        <a class="btn btn-primary" asp-action="RsvpForm">RSVP Now</a>
     </div>
+    <p>Click <a class="navbar-link" asp-action="ListResponses">here</a> to see who is coming.</p>
 </body>
 </html>
 
